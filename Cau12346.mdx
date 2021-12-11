@@ -1,0 +1,70 @@
+﻿/*
+	1. Report the number of calsulities by Severity (Fatal, Serious, Slight) in the Local
+    Authority Districts over all years. Reference:
+*/
+//SELECT 
+//non empty {[Dim Casualties Severity].[Hierarchy].[Description_Casual_Severity],[Dim Casualties Severity].[Hierarchy]}on columns,
+//non empty {[Dim Local Authority District].[Description_LADistrict].[Description_LADistrict]} on rows
+//FROM [QLBI Ques1 2 DDS];
+
+SELECT 
+non empty {[Dim Casualties Severity].[Hierarchy].[Description_Casual_Severity],[Dim Casualties Severity].[Hierarchy]}on columns,
+non empty crossjoin([Dim Local Authority District].[LACode].[LACode],{[Dim Local Authority District].[Description_LADistrict].[Description_LADistrict]}) on rows
+FROM [QLBI Ques1 2 DDS];
+
+/*
+2. Report the number of calsulities by Severity (Fatal, Serious, Slight) in the Local
+Authority Districts by Quarters in years. -- WAITING FOR CONFIRM
+Nếu được làm ở phần report thì dễ, còn không thì phải sửa câu này 1 xíu
+VD: quý thay vì chỉ ghi 1,2,3,4 thì sẽ ghi là CQ 1 2008, CQ 2 2008,v.v....
+*/
+
+SELECT 
+non empty crossjoin([Dim Date].[Year].[Year],{[Dim Casualties Severity].[Hierarchy].[Description_Casual_Severity],[Dim Casualties Severity].[Hierarchy]})on columns,
+non empty crossjoin([Dim Date].[Calendar_Casualty].[Quarter],[Dim Local Authority District].[LACode].[LACode],{[Dim Local Authority District].[Description_LADistrict].[Description_LADistrict]}) on rows
+FROM [QLBI Ques1 2 DDS];
+
+/*	
+3. Report the number of faltal calsulities by Gender, Casualty Type and Age Band
+over years. 
+Thiếu: trung bình qua các năm, ở mỗi nhóm tuổi tại mỗi type casualty có bao nhiêu ca thương vong
+Đã bổ sung: tổng số ca thương vong tại mỗi type casualty cho tất cả các nhóm tuổi qua mỗi năm: https://simonlearningsqlserver.wordpress.com/2018/03/25/grouping-sets-and-rollup-cube/
+*/
+SELECT non empty {[Dim Date Ques 3].[Ques3_Calendar].[Year],[Dim Date Ques 3].[Ques3_Calendar]} on columns, 
+non empty crossjoin ([Dim Casualty Type Ques 3].[Description_CasualtyType].[Description_CasualtyType],[Dim Age Band Ques 3].[Description_AgeBand].[Description_AgeBand]) on rows
+FROM (
+	SELECT
+	FROM [QLBI Ques3 DDS]
+    WHERE [Dim Casualties Severity Ques 3].[Description_CSeverity].&[Fatal]
+)
+WHERE [Dim Gender Ques 3].[Description_Sex].&[Female];
+
+---- Sử dụng all members để ra được giống như reference
+SELECT non empty [Dim Date Ques 3].[Ques3_Calendar].[Year].allmembers on columns, 
+non empty crossjoin ([Dim Casualty Type Ques 3].[Description_CasualtyType].allmembers,[Dim Age Band Ques 3].[Description_AgeBand].allmembers) on rows
+FROM (
+	SELECT
+	FROM [QLBI Ques3 DDS]
+    WHERE [Dim Casualties Severity Ques 3].[Description_CSeverity].&[Fatal]
+)
+WHERE [Dim Gender Ques 3].[Description_Sex].&[Female];
+
+/*
+	Câu 6. Report the number of calsulities by Severity, Casualty Type and Age Group over years
+	Thiếu: % change
+*/
+SELECT non empty crossjoin ([Dim Date Ques 6].[Ques6_Calendar].[Year],[Dim Casualties Severity Ques 6].[Description_CSQues6].[Description_CSQues6] ) on columns, 
+non empty crossjoin([Dim Casualty Type Ques 6].[Description_CType].[Description_CType],[Dim Age Group Ques 6].[Description_AgeGroup].[Description_AgeGroup]) on rows
+FROM [QLBI Ques6 DDS];
+/*
+	Câu 4: 4. Report the number of accidents by Severity and Time of Day (Morning: 5am-
+   12pm, Afternoon: 12pm-5pm, Evening: 5pm-9pm, Night: 9pm-5am) over years
+*/
+SELECT non empty crossjoin([Dim Time Of Day Ques 4].[Description_TimeOfDay].[Description_TimeOfDay],[Dim Date Ques 4].[Ques4_Calendar].[Year]) on rows,
+non empty {[Dim Accident Severity Ques 4].[Ques4_AccidentSeverity].[SK Accident Severity],[Dim Accident Severity Ques 4].[Ques4_AccidentSeverity].[All]} on columns
+FROM [QLBI Ques4 DDS];
+
+//SELECT non empty crossjoin([Dim Time Of Day Ques 4].[Description_TimeOfDay].[Description_TimeOfDay],[Dim Date Ques 4].[Ques4_Calendar].[Year]) on rows,
+//non empty crossjoin ([Dim Accident Severity Ques 4].[Description_Accident_Severity].[Description_Accident_Severity],
+//{[Dim Accident Severity Ques 4].[Ques4_AccidentSeverity].[SK Accident Severity],[Dim Accident Severity Ques 4].[Ques4_AccidentSeverity].[All]}) on columns
+//FROM [QLBI Ques4 DDS];

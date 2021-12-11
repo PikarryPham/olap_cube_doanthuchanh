@@ -1,0 +1,147 @@
+﻿<ConfigurationSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Database>
+    <DataSources>
+      <DataSource>
+        <ID>QLBI Ques1 2 DDS</ID>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=DESKTOP-ED2S73F\TRANGPHAM;Integrated Security=SSPI;Initial Catalog=QLBI_Ques1_2_DDS</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateAccount</ImpersonationMode>
+          <Account xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">MON</Account>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">PasswordRemoved</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
+      <DataSource>
+        <ID>QLBI Ques3 DDS</ID>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=DESKTOP-ED2S73F\TRANGPHAM;Integrated Security=SSPI;Initial Catalog=QLBI_Ques3_DDS</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateAccount</ImpersonationMode>
+          <Account xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">MON</Account>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">PasswordRemoved</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
+      <DataSource>
+        <ID>QLBI Ques4 DDS</ID>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=DESKTOP-ED2S73F\TRANGPHAM;Integrated Security=SSPI;Initial Catalog=QLBI_Ques4_DDS</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateAccount</ImpersonationMode>
+          <Account xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">MON</Account>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">PasswordRemoved</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
+      <DataSource>
+        <ID>QLBI Ques6 DDS</ID>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=DESKTOP-ED2S73F\TRANGPHAM;Integrated Security=SSPI;Initial Catalog=QLBI_Ques6_DDS</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateAccount</ImpersonationMode>
+          <Account xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">MON</Account>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">PasswordRemoved</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
+    </DataSources>
+    <Dimensions>
+      <Dimension>
+        <ID>Dim Casualties Severity</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Local Authority District</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Date</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Casualty Type Ques 3</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Age Band Ques 3</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Gender Ques 3</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Casualties Severity Ques 3</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Date Ques 3</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Accident Severity Ques 4</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Time Of Day Ques 4</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Date Ques 4</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Casualty Type Ques 6</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Date Ques 6</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Casualties Severity Ques 6</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Age Group Ques 6</ID>
+      </Dimension>
+    </Dimensions>
+    <Cubes>
+      <Cube>
+        <ID>QLBI Ques1 2 DDS</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Table</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Table</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>QLBI Ques3 DDS</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Table Ques 3</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Table</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>QLBI Ques4 DDS</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact TableQues 4</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Table</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>QLBI Ques6 DDS</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Table Ques 6</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Table</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+    </Cubes>
+    <DataSourceImpersonationInfo>
+      <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
+      <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+    </DataSourceImpersonationInfo>
+  </Database>
+</ConfigurationSettings>

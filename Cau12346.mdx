@@ -6,7 +6,8 @@
 SELECT 
 non empty {[Dim Casualties Severity].[Description_Casual_Severity].[Description_Casual_Severity],[Dim Casualties Severity].[Description_Casual_Severity]}on columns,
 non empty crossjoin([Dim Local Authority District].[LACode].[LACode],{[Dim Local Authority District].[Description_LADistrict].[Description_LADistrict]}) on rows
-FROM [QLBI Ques1 2 DDS];
+FROM [QLBI Ques1 2 DDS]
+WHERE [Measures].[Number Of Casualities];
 /*
 2. Report the number of calsulities by Severity (Fatal, Serious, Slight) in the Local
 Authority Districts by Quarters in years. -- WAITING FOR CONFIRM
@@ -22,7 +23,7 @@ FROM [QLBI Ques1 2 DDS];
 /*	
 3. Report the number of faltal calsulities by Gender, Casualty Type and Age Band
 over years. 
-Thiếu: trung bình qua các năm, ở mỗi nhóm tuổi tại mỗi type casualty có bao nhiêu ca thương vong
+Đã bổ sung: trung bình qua các năm, ở mỗi nhóm tuổi tại mỗi type casualty có bao nhiêu ca thương vong
 Đã bổ sung: tổng số ca thương vong tại mỗi type casualty cho tất cả các nhóm tuổi qua mỗi năm: https://simonlearningsqlserver.wordpress.com/2018/03/25/grouping-sets-and-rollup-cube/
 */
 SELECT non empty {[Dim Date Ques 3].[Ques3_Calendar].[Year],[Dim Date Ques 3].[Ques3_Calendar]} on columns, 
@@ -35,14 +36,21 @@ FROM (
 WHERE [Dim Gender Ques 3].[Description_Sex].&[Female];
 
 ---- Sử dụng all members để ra được giống như reference
-SELECT non empty [Dim Date Ques 3].[Ques3_Calendar].[Year].allmembers on columns, 
-non empty crossjoin ([Dim Casualty Type Ques 3].[Description_CasualtyType].allmembers,[Dim Age Band Ques 3].[Description_AgeBand].allmembers) on rows
-FROM (
+ WITH MEMBER [Dim Date Ques 3].[Year].[2011-13 average] AS AVG( [Dim Date Ques 3].[Ques3_Calendar].[Year].&[2011] : [Dim Date Ques 3].[Ques3_Calendar].[Year].&[2013]) 
+ SELECT 
+   NON EMPTY 
+     [Dim Date Ques 3].[Year].ALLMEMBERS ON COLUMNS
+  ,NON EMPTY 
+     CrossJoin
+     (
+       [Dim Casualty Type Ques 3].[Description_CasualtyType].[Description_CasualtyType]
+      ,[Dim Age Band Ques 3].[Description_AgeBand].ALLMEMBERS
+     ) ON ROWS
+ FROM (
 	SELECT
 	FROM [QLBI Ques3 DDS]
-    WHERE [Dim Casualties Severity Ques 3].[Description_CSeverity].&[Fatal]
-)
-WHERE [Dim Gender Ques 3].[Description_Sex].&[Female];
+    WHERE [Dim Casualties Severity Ques 3].[Description_CSeverity].&[Fatal] )
+ WHERE [Dim Gender Ques 3].[Description_Sex].&[Female];
 
 /*
 	Câu 6. Report the number of calsualities by Severity, Casualty Type and Age Group over years

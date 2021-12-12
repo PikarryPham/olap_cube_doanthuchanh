@@ -1,0 +1,159 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="32e88d23-d023-48d7-a334-706cb9e3766e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>QLBI Ques5 DDS</ID>
+  <Name>QLBI Ques5 DDS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>QLBI Ques5 DDS</DataSourceID>
+  <Schema>
+    <xs:schema id="QLBI_x0020_Ques5_x0020_DDS" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="QLBI_x0020_Ques5_x0020_DDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="be37f269-0ef2-41ad-a23c-035309b304bf">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_Accident_Severity" msprop:design-time-name="cf32447f-d58c-4b94-9a8e-92251edaa6f1" msprop:DbTableName="Dim_Accident_Severity" msprop:FriendlyName="Dim_Accident_Severity" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKAccident_Severity" msprop:design-time-name="125ea9c5-2440-40d2-a8a9-10ec08f86db5" msprop:DbColumnName="SKAccident_Severity" msprop:FriendlyName="SKAccident_Severity" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="73e244b4-310c-42ed-b3cb-acf9538c5004" msprop:DbColumnName="Description" msprop:FriendlyName="Description">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Date" msprop:design-time-name="d24e503c-0d6b-49ce-97d1-fbd0e3c6d4af" msprop:DbTableName="Dim_Date" msprop:FriendlyName="Dim_Date" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKDate" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="0adb44ba-e493-4860-be1b-2ca608200820" msprop:DbColumnName="SKDate" msprop:FriendlyName="SKDate" type="xs:int" />
+                  <xs:element name="Year_" msprop:design-time-name="a7c22789-0002-41f1-b165-a6e6f42f2a2b" msprop:DbColumnName="Year_" msprop:FriendlyName="Year_" type="xs:int" />
+                  <xs:element name="Quarter_" msprop:design-time-name="611b4240-0959-4f6a-807e-0b878a923443" msprop:DbColumnName="Quarter_" msprop:FriendlyName="Quarter_" type="xs:int" />
+                  <xs:element name="Month_" msprop:design-time-name="ad6dea4b-bfb5-4d19-a3cc-1db227dc4e7f" msprop:DbColumnName="Month_" msprop:FriendlyName="Month_" type="xs:int" />
+                  <xs:element name="Day_" msprop:design-time-name="16a064cf-a9c4-488b-888e-59df7403430c" msprop:DbColumnName="Day_" msprop:FriendlyName="Day_" type="xs:dateTime" />
+                  <xs:element name="create_date" msprop:design-time-name="9ee88856-69f5-4b21-9b8d-b6182249be1e" msprop:DbColumnName="create_date" msprop:FriendlyName="create_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="update_date" msprop:design-time-name="be2f5c24-4ef0-4d20-bbc4-9a4696aa74b7" msprop:DbColumnName="update_date" msprop:FriendlyName="update_date" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Road_Type" msprop:design-time-name="6a3572c0-41a4-431b-8fd7-1e6681c6fa62" msprop:DbTableName="Dim_Road_Type" msprop:FriendlyName="Dim_Road_Type" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKRoad_Type" msprop:design-time-name="a4896963-4417-4f48-98d7-20337ef73613" msprop:DbColumnName="SKRoad_Type" msprop:FriendlyName="SKRoad_Type" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="1223358e-4d96-4c10-b452-2e136a908ff8" msprop:DbColumnName="Description" msprop:FriendlyName="Description">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Urban_Or_Rural_Area" msprop:design-time-name="22bbe29c-32b3-434d-ba2d-bef7c472fae3" msprop:DbTableName="Dim_Urban_Or_Rural_Area" msprop:FriendlyName="Dim_Urban_Or_Rural_Area" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKUrban_Or_Rural_Area" msprop:design-time-name="863ec775-1190-42c2-a315-5a28e9e0d84b" msprop:DbColumnName="SKUrban_Or_Rural_Area" msprop:FriendlyName="SKUrban_Or_Rural_Area" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="75fe0589-336e-44d4-994d-d5d697f41aec" msprop:DbColumnName="Description" msprop:FriendlyName="Description">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_Table" msprop:design-time-name="dee30ab2-9d3c-4746-ae28-7e7d7b1f2c3f" msprop:DbTableName="Fact_Table" msprop:FriendlyName="Fact_Table" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKFact" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="e370fea2-a02b-4270-ac11-372d48e4d9cb" msprop:DbColumnName="SKFact" msprop:FriendlyName="SKFact" type="xs:int" />
+                  <xs:element name="SKAccident_Severity" msprop:design-time-name="6c6340e6-7ed5-4b90-97c1-1c8e7b892d34" msprop:DbColumnName="SKAccident_Severity" msprop:FriendlyName="SKAccident_Severity" type="xs:int" />
+                  <xs:element name="SKDate" msprop:design-time-name="11864ea9-a71b-4d97-9f81-863f24903b81" msprop:DbColumnName="SKDate" msprop:FriendlyName="SKDate" type="xs:int" />
+                  <xs:element name="SKUrban_Or_Rural_Area" msprop:design-time-name="9966e775-4d64-451f-a482-fdad73b14621" msprop:DbColumnName="SKUrban_Or_Rural_Area" msprop:FriendlyName="SKUrban_Or_Rural_Area" type="xs:int" />
+                  <xs:element name="SKRoad_Type" msprop:design-time-name="628cf992-fff0-4466-91d8-60b5ecb35893" msprop:DbColumnName="SKRoad_Type" msprop:FriendlyName="SKRoad_Type" type="xs:int" />
+                  <xs:element name="Number_of_Accidents" msprop:design-time-name="d043aa31-5192-473f-90ac-6e7f4bebc104" msprop:DbColumnName="Number_of_Accidents" msprop:FriendlyName="Number_of_Accidents" type="xs:int" minOccurs="0" />
+                  <xs:element name="create_date" msprop:design-time-name="e290fd6e-3941-424c-914d-8dded120b968" msprop:DbColumnName="create_date" msprop:FriendlyName="create_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="update_date" msprop:design-time-name="6a74b1b7-176b-42f8-a3a2-68341f694896" msprop:DbColumnName="update_date" msprop:FriendlyName="update_date" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Accident_Severity" />
+          <xs:field xpath="SKAccident_Severity" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Date_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Date" />
+          <xs:field xpath="SKDate" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Road_Type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Road_Type" />
+          <xs:field xpath="SKRoad_Type" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Urban_Or_Rural_Area_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Urban_Or_Rural_Area" />
+          <xs:field xpath="SKUrban_Or_Rural_Area" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_Table_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKFact" />
+        </xs:unique>
+        <xs:keyref name="FK_Fact_Date" refer="dbo_Dim_Date_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKDate" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Road_Type" refer="dbo_Dim_Road_Type_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKRoad_Type" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Urban_Or_Rural_Area" refer="dbo_Dim_Urban_Or_Rural_Area_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKUrban_Or_Rural_Area" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Accident_Severity" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKAccident_Severity" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <QLBI_x0020_Ques5_x0020_DDS xmlns="" />
+  </Schema>
+</DataSourceView>

@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a2261b23-59b0-46a3-8834-072f011c0a49" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4a560595-c747-4706-9088-c6b04b61d44f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Casualties Severity</ID>
   <Name>Dim Casualties Severity</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -84,31 +84,31 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="5b833a4b-a288-4181-822e-3fd580fb315b">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="899c0f27-4139-4d4d-8887-07811460a65b">
     <DataSourceViewID>QLBI Ques1 2 DDS</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="9f5d86a3-1786-4d41-bd60-1abdabe39814">
+  <ErrorConfiguration dwd:design-time-name="88dd3081-fcc7-43c4-b939-5d71d56b32f9">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="743f7819-fb69-4187-85f1-4c1a43cc5429">
+    <Attribute dwd:design-time-name="3b66778f-b3f0-4dde-96b7-55e429b31179">
       <ID>SK Casualty Severity</ID>
       <Name>SK Casualty Severity</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="26b17097-64f7-4e57-8a60-5a405e636410">
+        <KeyColumn dwd:design-time-name="09d8e938-f038-4bc4-bf89-b1aee13a1e85">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="d3ff4761-6fdc-46c9-8f30-009e8606ffdd">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1d97f826-a02c-477d-af71-6d31e3feeb6b">
             <TableID>dbo_Dim_Casualties_Severity</TableID>
             <ColumnID>SKCasualty_Severity</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="e459c3e2-2f3b-4a2a-817e-59db1c5caa8d">
+        <AttributeRelationship dwd:design-time-name="393bdc77-ce4d-4e6e-b5f0-120d398c6d2b">
           <AttributeID>Description</AttributeID>
           <Name>Description_Casual_Severity</Name>
         </AttributeRelationship>
@@ -117,14 +117,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="0495aa76-7e6c-4d12-bead-825879ef8fb7">
+    <Attribute dwd:design-time-name="e937ce54-d91f-47a1-bed0-dd0b140b22e2">
       <ID>Description</ID>
       <Name>Description_Casual_Severity</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="c97d453c-882c-4ceb-b998-ac30f2c08dd4">
+        <KeyColumn dwd:design-time-name="15bb8c05-73dc-45b9-9cff-b2e39f95a360">
           <DataType>WChar</DataType>
           <DataSize>255</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="15fb9530-484a-4aa3-8cb9-e8fdc5cfadea">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e10b056a-2e20-439f-8df8-6feaafbd2fbe">
             <TableID>dbo_Dim_Casualties_Severity</TableID>
             <ColumnID>Description</ColumnID>
           </Source>
@@ -134,18 +134,5 @@
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
   </Attributes>
-  <Hierarchies>
-    <Hierarchy dwd:design-time-name="c04a1356-fa25-4062-9208-590905cf3b1f">
-      <ID>Hierarchy</ID>
-      <Name>Hierarchy</Name>
-      <Levels>
-        <Level dwd:design-time-name="e4ec5b9a-287e-4b45-94ed-713242cd5894">
-          <ID>Description_Casual_Severity</ID>
-          <Name>Description_Casual_Severity</Name>
-          <SourceAttributeID>Description</SourceAttributeID>
-        </Level>
-      </Levels>
-    </Hierarchy>
-  </Hierarchies>
   <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
 </Dimension>

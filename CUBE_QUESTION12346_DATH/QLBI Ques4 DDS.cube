@@ -1,4 +1,4 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6f2f5b0d-5f8f-498f-a6a6-1d3f9736dd6a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e45a1519-b8b7-46df-98c6-f1cb8f09aefb" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>QLBI Ques4 DDS</ID>
   <Name>QLBI Ques4 DDS</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -156,72 +156,62 @@
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
-    <Dimension dwd:design-time-name="c2046935-de6c-440d-a428-a61022e1810c">
+    <Dimension dwd:design-time-name="0a1aa331-e56f-400c-b026-0d9a95e7ed03">
       <ID>Dim Accident Severity Ques 4</ID>
       <Name>Dim Accident Severity Ques 4</Name>
       <DimensionID>Dim Accident Severity Ques 4</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="27c15858-dcf0-4db2-bbde-2279d1abd158">
+        <Attribute dwd:design-time-name="70f94d53-ecd6-49d6-a64e-d04cb7663a5d">
           <AttributeID>SK Accident Severity</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="b76b7fa6-1fc4-44f1-884f-8fdb8f0ed4c9">
+        <Attribute dwd:design-time-name="1881454c-1a97-41b4-98f4-dbd07569fe14">
           <AttributeID>Description</AttributeID>
         </Attribute>
       </Attributes>
-      <Hierarchies>
-        <Hierarchy dwd:design-time-name="5c554efe-44fa-4e94-aee0-32773250507e">
-          <HierarchyID>Hierarchy</HierarchyID>
-        </Hierarchy>
-      </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="f79b426f-944b-47d3-be46-c86ea700c988">
+    <Dimension dwd:design-time-name="c13a1a60-11f1-4e5c-9dea-3a4db10aa131">
       <ID>Dim Time Of Day Ques 4</ID>
       <Name>Dim Time Of Day Ques 4</Name>
       <DimensionID>Dim Time Of Day Ques 4</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="d53a825c-bc66-48cb-b1d3-059b28ca2dac">
+        <Attribute dwd:design-time-name="4df22d89-809c-4918-bf96-021d5e7e6b18">
           <AttributeID>SK Time Of Day</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="277c3236-209f-4d6d-aef0-1ef21d747444">
+        <Attribute dwd:design-time-name="39872cd4-a4b7-4f0a-b3cc-0265d41973f5">
           <AttributeID>Description</AttributeID>
         </Attribute>
       </Attributes>
-      <Hierarchies>
-        <Hierarchy dwd:design-time-name="57a0e47f-b15a-48f5-84ac-01db229f5237">
-          <HierarchyID>Hierarchy</HierarchyID>
-        </Hierarchy>
-      </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="098e904c-cf99-4b36-b9ee-dc64e085483d">
+    <Dimension dwd:design-time-name="96996bd7-6206-420e-bf06-2009a2ecbbef">
       <ID>Dim Date Ques 4</ID>
       <Name>Dim Date Ques 4</Name>
       <DimensionID>Dim Date Ques 4</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="41c50588-8159-43ae-94a9-67792f32297b">
+        <Attribute dwd:design-time-name="2cd65b4f-b92a-4bf8-b69b-1b189af10747">
           <AttributeID>SK Date</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="b8c1166f-d510-4520-942b-85b2322c914f">
+        <Attribute dwd:design-time-name="b340045c-1a14-4ee5-a5da-8e36172669fe">
           <AttributeID>Year</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="888df835-c52b-4724-9a5a-a1de914f43f5">
+        <Attribute dwd:design-time-name="303aa16b-71a9-4ee8-ad62-0e70651b0122">
           <AttributeID>Quarter</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="c3f2cfab-7efd-451c-96c6-fe45af58e987">
+        <Attribute dwd:design-time-name="1972ef0f-177c-4c24-b8bf-9960be69e49b">
           <AttributeID>Month</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="b4b4ae69-52cb-42b0-b869-1c6e65511df8">
+        <Attribute dwd:design-time-name="6c59f3ac-4ec5-4f52-9633-cf9fef9382bc">
           <AttributeID>Day</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="c35aa150-10e5-472c-9bce-708661c31c2f">
+        <Hierarchy dwd:design-time-name="da5d4eaa-3733-4d29-833a-3aaa4061cca8">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
   </Dimensions>
   <MeasureGroups>
-    <MeasureGroup dwd:design-time-name="4b92e4c4-1a09-401c-a782-ec6edacbff45">
+    <MeasureGroup dwd:design-time-name="1034c053-6434-4f99-8528-b73e70f99089">
       <ID>Fact TableQues 4</ID>
       <Name>Fact TableQues 4</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -229,25 +219,25 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="fde43d66-a73c-405a-ac0c-8901e5855485">
+        <Measure dwd:design-time-name="2f34264e-cab9-42de-b5ba-fbb4e2f837cf">
           <ID>Number Of Accidents</ID>
           <Name>Number Of Accidents</Name>
-          <Source dwd:design-time-name="852d6fee-39a5-4c97-952d-6152f48a9db6">
+          <Source dwd:design-time-name="f1fc03b6-4ba1-444e-ab23-a2eb5ca06a6f">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="a0e5c360-509a-4d2a-b7df-ae0a2cb0fd4c">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ffbccf90-35c2-449d-9b66-8e8a744ab386">
               <TableID>dbo_Fact_Table</TableID>
               <ColumnID>Number_of_Accidents</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="17e3f116-ed33-42c3-8442-b0cd63e70029">
+        <Measure dwd:design-time-name="17732d5e-d1ab-4e51-91e7-f8f68250eca8">
           <ID>Fact Table Count</ID>
           <Name>Fact Table Count</Name>
           <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="e96d104e-ad90-496d-bbcc-350baf52a0d9">
+          <Source dwd:design-time-name="ca057f29-6afd-4398-a0a5-9767ced1b2a0">
             <DataType>Integer</DataType>
             <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="42c5760a-195f-4a5d-ba3c-4b5fece08b08">
+            <Source xsi:type="RowBinding" dwd:design-time-name="4c127c45-cea5-46b6-ae3f-61e5041cc7a2">
               <TableID>dbo_Fact_Table</TableID>
             </Source>
           </Source>
@@ -256,15 +246,15 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f5950855-b4b7-4c84-a495-94390a1f70e1">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a28fac80-bb6e-418f-a5e7-66435382271d">
           <CubeDimensionID>Dim Accident Severity Ques 4</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="50974645-6fbe-4f11-943b-c046e374efa2">
+            <Attribute dwd:design-time-name="5a5865e6-7608-4a21-845e-ad71818081c8">
               <AttributeID>SK Accident Severity</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="b0c2889c-19fa-4e70-b971-f5527285eac2">
+                <KeyColumn dwd:design-time-name="becda2d5-269a-4f2f-89f0-2125414e2337">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cb75a4b6-86a1-40ca-a8c5-dd661a4e0b46">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="df272993-ce2b-48cd-817c-2a20f8954600">
                     <TableID>dbo_Fact_Table</TableID>
                     <ColumnID>SKAccident_Severity</ColumnID>
                   </Source>
@@ -274,15 +264,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="30294a72-408c-4209-b451-528a88e8d6f4">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="fddb57ad-64e6-466f-8df8-6ba9780d04b0">
           <CubeDimensionID>Dim Time Of Day Ques 4</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="325a6a80-334f-48ee-a812-579bffab29b6">
+            <Attribute dwd:design-time-name="2145e210-6413-4b81-b77d-0d6a9a487f8d">
               <AttributeID>SK Time Of Day</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="42c0a331-3e03-4b3b-be1e-0431dfc0a06b">
+                <KeyColumn dwd:design-time-name="425b2ec6-32c7-4328-8524-efab0d36d653">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ea2ecfcb-2601-450f-b55a-48cd79635978">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b1665065-9bf9-4e07-99e5-3a4e2c9b12c3">
                     <TableID>dbo_Fact_Table</TableID>
                     <ColumnID>SKTime_Of_Day</ColumnID>
                   </Source>
@@ -292,15 +282,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c17399c9-3339-4510-b690-2757d5cb060e">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1eea3324-87cb-434b-a967-17645ee657a9">
           <CubeDimensionID>Dim Date Ques 4</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="32091933-c2cc-4894-bd99-60c1cf323a62">
+            <Attribute dwd:design-time-name="dbdd8296-230f-413b-a67d-99242c291bfb">
               <AttributeID>SK Date</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="984da801-4806-49b4-a667-2254ec117e71">
+                <KeyColumn dwd:design-time-name="fc190385-54c1-42fa-97bb-387a4fa01b6e">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="021b0fb5-b39a-4bdc-b74d-404588da5ed7">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="36ac17b4-4385-4dce-a19f-2b4279df468f">
                     <TableID>dbo_Fact_Table</TableID>
                     <ColumnID>SKDate</ColumnID>
                   </Source>
@@ -314,7 +304,7 @@
       <Partitions />
     </MeasureGroup>
   </MeasureGroups>
-  <Source dwd:design-time-name="8b1ad9a4-25e8-4eeb-852f-badc7e4454ce">
+  <Source dwd:design-time-name="fa02eeb1-8127-46ea-ad27-03e7a55c6afb">
     <DataSourceViewID>QLBI Ques4 DDS</DataSourceViewID>
   </Source>
 </Cube>

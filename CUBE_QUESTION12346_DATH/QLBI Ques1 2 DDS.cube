@@ -1,4 +1,4 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5b2dab8f-4cd0-4077-a32b-d9a29d7c13ae" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c4f389ab-eb37-47a0-a73a-4f067ccc923b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>QLBI Ques1 2 DDS</ID>
   <Name>QLBI Ques1 2 DDS</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -156,75 +156,65 @@
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
-    <Dimension dwd:design-time-name="e360f113-12bc-4900-b984-e84b4ddb7008">
+    <Dimension dwd:design-time-name="91a0d453-8c28-443f-b981-0cb881f59f31">
       <ID>Dim Casualties Severity</ID>
       <Name>Dim Casualties Severity</Name>
       <DimensionID>Dim Casualties Severity</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="acb35549-8502-4d3b-8cd6-24acf8a023bc">
+        <Attribute dwd:design-time-name="7c1628dc-a03a-429f-924f-1c5833bf03c9">
           <AttributeID>SK Casualty Severity</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="b5092069-1519-4028-84fb-959ebe4951b3">
+        <Attribute dwd:design-time-name="d4de3e9a-a900-4117-bf43-e0aea52e7ab9">
           <AttributeID>Description</AttributeID>
         </Attribute>
       </Attributes>
-      <Hierarchies>
-        <Hierarchy dwd:design-time-name="5cc02b75-4775-481e-abde-fbb41dc9399e">
-          <HierarchyID>Hierarchy</HierarchyID>
-        </Hierarchy>
-      </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="b6d82a3b-9b1b-42e2-843e-c912225725ba">
+    <Dimension dwd:design-time-name="3d4a85e4-9d70-4458-ae5b-ed24deef3bdf">
       <ID>Dim Local Authority District</ID>
       <Name>Dim Local Authority District</Name>
       <DimensionID>Dim Local Authority District</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="11ac4957-4bda-4cb5-80b0-e70cee760f29">
+        <Attribute dwd:design-time-name="1cbf8fef-6e32-4144-865d-0780e721526c">
           <AttributeID>SK Local Authority District</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="163c30f8-2197-48f8-bc2f-40e6b41f4571">
+        <Attribute dwd:design-time-name="7a07d3a2-ba5c-4dfb-9f0f-19b7d039620a">
           <AttributeID>Code</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="5df9a923-4a47-4ced-9fbd-4184e027a39d">
+        <Attribute dwd:design-time-name="a0262f27-468c-421a-a021-4b87dbf09f6c">
           <AttributeID>Description</AttributeID>
         </Attribute>
       </Attributes>
-      <Hierarchies>
-        <Hierarchy dwd:design-time-name="15b854cc-1725-4048-90e5-e257f7a57f03">
-          <HierarchyID>Hierarchy</HierarchyID>
-        </Hierarchy>
-      </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="ed77f402-4583-40a5-9d06-3d042270ccb8">
+    <Dimension dwd:design-time-name="14a60d57-5d22-4c32-ac91-8a40a53fdd48">
       <ID>Dim Date</ID>
       <Name>Dim Date</Name>
       <DimensionID>Dim Date</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="7c677815-e606-4807-823f-22559b04992b">
+        <Attribute dwd:design-time-name="b6bead15-a104-471e-8318-25c7129ea251">
           <AttributeID>SK Date</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="626ca080-40eb-4814-b26f-a305abcc9e08">
+        <Attribute dwd:design-time-name="a9282f4c-640e-4acd-a99c-1f1dc31266ac">
           <AttributeID>Year</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="0eb52693-907f-4f79-9ac9-802efa40e133">
+        <Attribute dwd:design-time-name="a8f09c45-6d89-419e-adde-8adcdf1ec9d6">
           <AttributeID>Quarter</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="6b31d1cf-7910-41cc-b48b-1edf787a7f8d">
+        <Attribute dwd:design-time-name="8d825a91-9ccf-4440-a96f-f888ff5422ba">
           <AttributeID>Month</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="6c77e377-1d9f-4d4d-b3be-26829e9cf153">
+        <Attribute dwd:design-time-name="aa76c62d-b27a-43f6-8b06-37cb0a64ca5b">
           <AttributeID>Day</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="45a3aa21-d88a-48d6-91d7-6eec8a675715">
+        <Hierarchy dwd:design-time-name="317dc7e2-d048-4578-9b02-ab117ad34085">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
   </Dimensions>
   <MeasureGroups>
-    <MeasureGroup dwd:design-time-name="71588845-036b-48de-a35e-b85978dc0280">
+    <MeasureGroup dwd:design-time-name="ffaa82ec-02c9-446d-a76a-e1b3bd7b9562">
       <ID>Fact Table</ID>
       <Name>Fact Table</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -232,25 +222,25 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="79c1d524-9eab-4861-9a90-6225887f121e">
+        <Measure dwd:design-time-name="1398aa38-b136-4e6d-82a8-b24c9e88f7c1">
           <ID>Number Of Casualities</ID>
           <Name>Number Of Casualities</Name>
-          <Source dwd:design-time-name="a327d2a4-39bf-4540-8079-fab8ed116da3">
+          <Source dwd:design-time-name="ea7cfd58-77b9-4699-b156-bdf9c1d0074c">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="54c21edf-395a-45b5-9efc-3ee351308cc3">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0ec40d69-b33b-4756-b44f-dfd7e384cadc">
               <TableID>dbo_Fact_Table</TableID>
               <ColumnID>Number_of_Casualities</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="f0e42aa9-f459-4043-99dd-44529b1d3d2a">
+        <Measure dwd:design-time-name="b24cb544-3802-4c78-ba6e-db9203c13d86">
           <ID>Fact Table Count</ID>
           <Name>Fact Table Count</Name>
           <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="5966c6a8-943b-449d-8ff3-6da9a1b3ffe0">
+          <Source dwd:design-time-name="baeb080a-8c26-47ab-a9e5-9932a5abde7f">
             <DataType>Integer</DataType>
             <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="2e500673-d48b-4474-9c14-11d6930f89e7">
+            <Source xsi:type="RowBinding" dwd:design-time-name="d5f2667e-ff3e-40fd-83ad-0be81d17ab40">
               <TableID>dbo_Fact_Table</TableID>
             </Source>
           </Source>
@@ -259,15 +249,15 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="648b357a-95b9-4597-97a8-36ad56a940a9">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4bc5df20-611f-4992-80ab-4b5b77b457c1">
           <CubeDimensionID>Dim Casualties Severity</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="b056a0bb-443e-4b8f-b627-6bb1fae71a45">
+            <Attribute dwd:design-time-name="e8bb4cb9-c027-4be2-890d-9ae45cadd854">
               <AttributeID>SK Casualty Severity</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="56389481-b8e1-46b4-8254-b6fdc470f2a5">
+                <KeyColumn dwd:design-time-name="66e236f9-7f32-4a87-9d19-acc28702eb53">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b04035a2-2aef-4d05-ac60-709abd4fe931">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d7a13a52-03a1-44a1-a7ea-8f1c53a214cd">
                     <TableID>dbo_Fact_Table</TableID>
                     <ColumnID>SKCasualty_Severity</ColumnID>
                   </Source>
@@ -277,15 +267,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bbeb48dd-9290-43e7-894d-4b12b489cc87">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4f47cdc0-566d-4fa3-8fc0-9d18cfd264b4">
           <CubeDimensionID>Dim Local Authority District</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="7c80c353-fb23-4c28-b5e2-267c6c137b78">
+            <Attribute dwd:design-time-name="2c6d1ee1-11d4-4f51-aeb7-5ae74d7ceebb">
               <AttributeID>SK Local Authority District</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="c15e1383-a870-43d2-b649-d9df3fab47af">
+                <KeyColumn dwd:design-time-name="18fcbb23-6625-4849-83ee-6ea55e04a308">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c88cf7cd-bb9c-4eb7-a9bd-983808d760b5">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="48356fca-aa6e-4336-a2f0-79af0a9db787">
                     <TableID>dbo_Fact_Table</TableID>
                     <ColumnID>SKLocal_Authority_District</ColumnID>
                   </Source>
@@ -295,15 +285,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f6611149-7f93-46d3-a9db-47b2b18c9521">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f873aca4-1fe1-450b-b1d7-df6b1fa8b214">
           <CubeDimensionID>Dim Date</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="9e3c7818-b33c-4a12-b7f6-81bfae7a6429">
+            <Attribute dwd:design-time-name="9d752f31-982f-48dd-a4e3-0d6e754b62f8">
               <AttributeID>SK Date</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="52926df0-25b7-4490-b63a-2d1ffee8515d">
+                <KeyColumn dwd:design-time-name="12aee188-0d3b-44da-942a-5412df5001aa">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="25a43d6a-c8a7-4be9-b8d1-3d7bd0dadc16">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="66ba1430-7c06-45ca-a094-13a6fc2ef783">
                     <TableID>dbo_Fact_Table</TableID>
                     <ColumnID>SKDate</ColumnID>
                   </Source>
@@ -317,7 +307,7 @@
       <Partitions />
     </MeasureGroup>
   </MeasureGroups>
-  <Source dwd:design-time-name="f135a510-5669-4c5a-967a-ae760db76c06">
+  <Source dwd:design-time-name="05374c19-a3a6-451b-b3a6-489b5f3b3597">
     <DataSourceViewID>QLBI Ques1 2 DDS</DataSourceViewID>
   </Source>
 </Cube>

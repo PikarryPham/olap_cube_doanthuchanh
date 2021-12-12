@@ -1,17 +1,12 @@
 ﻿/*
-	1. Report the number of calsulities by Severity (Fatal, Serious, Slight) in the Local
+	1. Report the number of calsualities by Severity (Fatal, Serious, Slight) in the Local
     Authority Districts over all years. Reference:
 */
-//SELECT 
-//non empty {[Dim Casualties Severity].[Hierarchy].[Description_Casual_Severity],[Dim Casualties Severity].[Hierarchy]}on columns,
-//non empty {[Dim Local Authority District].[Description_LADistrict].[Description_LADistrict]} on rows
-//FROM [QLBI Ques1 2 DDS];
 
 SELECT 
-non empty {[Dim Casualties Severity].[Hierarchy].[Description_Casual_Severity],[Dim Casualties Severity].[Hierarchy]}on columns,
+non empty {[Dim Casualties Severity].[Description_Casual_Severity].[Description_Casual_Severity],[Dim Casualties Severity].[Description_Casual_Severity]}on columns,
 non empty crossjoin([Dim Local Authority District].[LACode].[LACode],{[Dim Local Authority District].[Description_LADistrict].[Description_LADistrict]}) on rows
 FROM [QLBI Ques1 2 DDS];
-
 /*
 2. Report the number of calsulities by Severity (Fatal, Serious, Slight) in the Local
 Authority Districts by Quarters in years. -- WAITING FOR CONFIRM
@@ -20,7 +15,7 @@ VD: quý thay vì chỉ ghi 1,2,3,4 thì sẽ ghi là CQ 1 2008, CQ 2 2008,v.v..
 */
 
 SELECT 
-non empty crossjoin([Dim Date].[Year].[Year],{[Dim Casualties Severity].[Hierarchy].[Description_Casual_Severity],[Dim Casualties Severity].[Hierarchy]})on columns,
+non empty crossjoin([Dim Date].[Year].[Year],{[Dim Casualties Severity].[Description_Casual_Severity].[Description_Casual_Severity],[Dim Casualties Severity].[Description_Casual_Severity] })on columns,
 non empty crossjoin([Dim Date].[Calendar_Casualty].[Quarter],[Dim Local Authority District].[LACode].[LACode],{[Dim Local Authority District].[Description_LADistrict].[Description_LADistrict]}) on rows
 FROM [QLBI Ques1 2 DDS];
 
@@ -50,7 +45,7 @@ FROM (
 WHERE [Dim Gender Ques 3].[Description_Sex].&[Female];
 
 /*
-	Câu 6. Report the number of calsulities by Severity, Casualty Type and Age Group over years
+	Câu 6. Report the number of calsualities by Severity, Casualty Type and Age Group over years
 	Thiếu: % change
 */
 SELECT non empty crossjoin ([Dim Date Ques 6].[Ques6_Calendar].[Year],[Dim Casualties Severity Ques 6].[Description_CSQues6].[Description_CSQues6] ) on columns, 
@@ -61,7 +56,7 @@ FROM [QLBI Ques6 DDS];
    12pm, Afternoon: 12pm-5pm, Evening: 5pm-9pm, Night: 9pm-5am) over years
 */
 SELECT non empty crossjoin([Dim Time Of Day Ques 4].[Description_TimeOfDay].[Description_TimeOfDay],[Dim Date Ques 4].[Ques4_Calendar].[Year]) on rows,
-non empty {[Dim Accident Severity Ques 4].[Ques4_AccidentSeverity].[SK Accident Severity],[Dim Accident Severity Ques 4].[Ques4_AccidentSeverity].[All]} on columns
+non empty {[Dim Accident Severity Ques 4].[Description_Accident_Severity].[Description_Accident_Severity],[Dim Accident Severity Ques 4].[Description_Accident_Severity]} on columns
 FROM [QLBI Ques4 DDS];
 
 //SELECT non empty crossjoin([Dim Time Of Day Ques 4].[Description_TimeOfDay].[Description_TimeOfDay],[Dim Date Ques 4].[Ques4_Calendar].[Year]) on rows,

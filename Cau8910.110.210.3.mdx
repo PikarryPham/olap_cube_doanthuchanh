@@ -1,0 +1,17 @@
+
+-- Cau 8-9: Report the number of accidents by Severity, Vehicle Type, Built-up Road over years.
+SELECT non empty crossjoin([Dim Built Up Road].[Description].[Description],
+[Dim Vehicle Type].[Description].[Description]) on rows, non empty 
+crossjoin ([Dim Date].[Year].[Year],{[Dim Accident Severity].[Description].[Description],[Dim Accident Severity].[Description]}) on columns FROM [QLBI 8 9 DDS] ;
+-- Cau 10.1:  Report the number of accidents by Age Band, Was Vehicle Left Hand Drive, Gender
+SELECT non empty crossjoin([Dim Age Band].[Description].[Description],
+[Dim Was Vehicle Left Hand Drive].[Description].[Description]) on rows, non empty {[Dim Gender].[Description].[Description],[Dim Gender].[Description]}
+on columns FROM [QLBI 10 1 DDS];
+-- Cau 10.2:  Report the number of accidents by Road Surface Condition, Weather Conditions, Light Condition
+SELECT non empty crossjoin([Dim Road Surface Conditions].[Description].[Description],[Dim Weather Conditions].[Description].[Description] )on rows, non empty 
+{[Dim Light Condition].[Description].[Description],[Dim Light Condition].[Description]}
+on columns FROM [QLBI 10 2 DDS];
+-- Cau 10.3:Report the number of accidents by Pedestrian Location, Pedestrian Movement, Casualty_Home_Area_Type
+SELECT non empty crossjoin([Dim Pedestrian Location].[Description].[Description], [Dim Pedestrian Movement].[Description].[Description]) on rows,
+{[Dim Home Area Type].[Description].[Description],[Dim Home Area Type].[Description]}
+on columns FROM [QLBI 10 3 DDS];

@@ -1,0 +1,137 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="76944a8c-37db-4990-b3f6-19da60a4ca15" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>QLBI 10 3 DDS</ID>
+  <Name>QLBI 10 3 DDS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>QLBI 10 3 DDS</DataSourceID>
+  <Schema>
+    <xs:schema id="QLBI_x0020_10_x0020_3_x0020_DDS" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="QLBI_x0020_10_x0020_3_x0020_DDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="31be2522-bd48-4851-9545-49d3912c1398">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_Home_Area_Type" msprop:design-time-name="f5f3feca-35ba-467e-8c5b-b17ad05e1e43" msprop:DbTableName="Dim_Home_Area_Type" msprop:FriendlyName="Dim_Home_Area_Type" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKHome_Area_Type" msprop:design-time-name="e2bb068d-184d-454b-8389-e1acafe3ea08" msprop:DbColumnName="SKHome_Area_Type" msprop:FriendlyName="SKHome_Area_Type" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="ede318dc-3fce-49a1-827e-b58675efa84d" msprop:DbColumnName="Description" msprop:FriendlyName="Description" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Pedestrian_Location" msprop:design-time-name="1a6a0131-d720-4842-9f19-02951ae45b28" msprop:DbTableName="Dim_Pedestrian_Location" msprop:FriendlyName="Dim_Pedestrian_Location" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKPedestrian_Location" msprop:design-time-name="abe38baa-dc25-46e5-af74-5a718acccae3" msprop:DbColumnName="SKPedestrian_Location" msprop:FriendlyName="SKPedestrian_Location" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="68cbafa9-0a38-4beb-b201-0775ece048f9" msprop:DbColumnName="Description" msprop:FriendlyName="Description" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Pedestrian_Movement" msprop:design-time-name="0822f62e-4254-4b30-820b-45b5b5eff4dc" msprop:DbTableName="Dim_Pedestrian_Movement" msprop:FriendlyName="Dim_Pedestrian_Movement" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKPedestrian_Movement" msprop:design-time-name="592abb05-778a-44d8-b5e4-6834cc9386a9" msprop:DbColumnName="SKPedestrian_Movement" msprop:FriendlyName="SKPedestrian_Movement" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="15195528-c32d-4edf-8c4f-4fae831db220" msprop:DbColumnName="Description" msprop:FriendlyName="Description" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_Table" msprop:design-time-name="1d3b9492-7502-4a1d-908e-8579e2db7e4c" msprop:DbTableName="Fact_Table" msprop:FriendlyName="Fact_Table" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKFact" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="eff3e935-42d4-45fb-8913-c23ab40e2dba" msprop:DbColumnName="SKFact" msprop:FriendlyName="SKFact" type="xs:int" />
+                  <xs:element name="SKPedestrian_Movement" msprop:design-time-name="b14fa92b-19d7-4481-97f2-1ca6decfc872" msprop:DbColumnName="SKPedestrian_Movement" msprop:FriendlyName="SKPedestrian_Movement" type="xs:int" />
+                  <xs:element name="SKPedestrian_Location" msprop:design-time-name="b4d798f1-a6a3-4273-b691-309ee91056c0" msprop:DbColumnName="SKPedestrian_Location" msprop:FriendlyName="SKPedestrian_Location" type="xs:int" />
+                  <xs:element name="SKHome_Area_Type" msprop:design-time-name="fe24346f-ed74-4c6c-b6d8-82c796e620c5" msprop:DbColumnName="SKHome_Area_Type" msprop:FriendlyName="SKHome_Area_Type" type="xs:int" />
+                  <xs:element name="number_of_accidents" msprop:design-time-name="a2ca4ed7-3d66-4789-8ab3-e943464e5cb1" msprop:DbColumnName="number_of_accidents" msprop:FriendlyName="number_of_accidents" type="xs:int" />
+                  <xs:element name="create_date" msprop:design-time-name="458eb10d-e4b8-4e05-9ef9-dbd05c8b5fe6" msprop:DbColumnName="create_date" msprop:FriendlyName="create_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="update_date" msprop:design-time-name="aaf8de54-6727-4f85-879e-f0485f923e31" msprop:DbColumnName="update_date" msprop:FriendlyName="update_date" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Home_Area_Type" />
+          <xs:field xpath="SKHome_Area_Type" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Pedestrian_Location_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Pedestrian_Location" />
+          <xs:field xpath="SKPedestrian_Location" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Pedestrian_Movement_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Pedestrian_Movement" />
+          <xs:field xpath="SKPedestrian_Movement" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_Table_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKFact" />
+        </xs:unique>
+        <xs:keyref name="FK_Fact_Pedestrian_Location" refer="dbo_Dim_Pedestrian_Location_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKPedestrian_Location" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Home_Area_Type" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKHome_Area_Type" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Pedestrian_Movement" refer="dbo_Dim_Pedestrian_Movement_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKPedestrian_Movement" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <QLBI_x0020_10_x0020_3_x0020_DDS xmlns="" />
+  </Schema>
+</DataSourceView>

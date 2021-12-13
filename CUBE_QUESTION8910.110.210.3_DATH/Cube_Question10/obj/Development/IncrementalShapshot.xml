@@ -1,0 +1,208 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Cube_Question10</Database>
+    <Server>DESKTOP-ASETP96\NGOTHANHTHAO</Server>
+    <ConnectionString>Data Source=DESKTOP-ASETP96\NGOTHANHTHAO;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>uhNtx8fVJ0bxdJSESwXZscin6Jg=12/10/2021 12:47:01 AM12/10/2021 12:47:01 AM</TimeStamp>
+        <ID>
+          <String>QLBI 10 1 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>an9ZyZMkYvT2iL/EQc9R1kPq5xU=12/10/2021 1:17:51 AM12/10/2021 1:17:51 AM</TimeStamp>
+        <ID>
+          <String>QLBI 10 2 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>THjrLCQPpWVd0ThNOgDEa8MMLmM=12/10/2021 1:52:00 AM12/10/2021 1:52:00 AM</TimeStamp>
+        <ID>
+          <String>QLBI 10 3 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>rLGyNIHVUbRG8jAmes4pVg4sqRo=12/10/2021 1:57:16 AM12/10/2021 1:57:16 AM</TimeStamp>
+        <ID>
+          <String>QLBI 8 9 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>w+X6tv6TtQk89+4F9RTdCaLXDp0=12/10/2021 12:47:21 AM12/10/2021 12:47:21 AM</TimeStamp>
+        <ID>
+          <String>QLBI 10 1 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>FLztlBeBLctBSKEidqPAO/HbUrQ=12/10/2021 1:18:15 AM12/10/2021 1:18:14 AM</TimeStamp>
+        <ID>
+          <String>QLBI 10 2 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>z6jiY1qFUafJ8MoDsADGlmDXXSo=12/10/2021 1:52:17 AM12/10/2021 1:52:17 AM</TimeStamp>
+        <ID>
+          <String>QLBI 10 3 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>TIs7+AsYyPOIVp2jI4Q3d3mBZ3M=12/10/2021 2:00:42 AM12/10/2021 2:00:42 AM</TimeStamp>
+        <ID>
+          <String>QLBI 8 9 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ptiSKEyj8FORP2a+gj97/s/lOq0=12/10/2021 1:05:59 AM12/10/2021 12:51:09 AM</TimeStamp>
+        <ID>
+          <String>Dim Gender</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>QW3Hpl9YBMKvT4vR+3dSbwzAjj0=12/10/2021 1:05:59 AM12/10/2021 12:51:09 AM</TimeStamp>
+        <ID>
+          <String>Dim Age Band</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ZXug7bNtz13sq3Da2q00oFbwB3k=12/10/2021 1:05:59 AM12/10/2021 12:51:09 AM</TimeStamp>
+        <ID>
+          <String>Dim Was Vehicle Left Hand Drive</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>7AsUDtQgjg+tymOpjL0Q7gIM34Y=12/10/2021 1:21:09 AM12/10/2021 1:20:23 AM</TimeStamp>
+        <ID>
+          <String>Dim Light Condition</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>gfjTSAPh7eDwV0EBkqaQc5qGjaI=12/10/2021 1:21:09 AM12/10/2021 1:20:23 AM</TimeStamp>
+        <ID>
+          <String>Dim Road Surface Conditions</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>oE//8vopQOXiZKdWW7EIV+LsvOE=12/10/2021 1:21:09 AM12/10/2021 1:20:23 AM</TimeStamp>
+        <ID>
+          <String>Dim Weather Conditions</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>69bq/wfr7XozDfBe0d57tra05Vc=12/10/2021 1:53:09 AM12/10/2021 1:52:37 AM</TimeStamp>
+        <ID>
+          <String>Dim Pedestrian Movement</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>JiDMy0B5WAqps4md5jl9fEHk5vs=12/10/2021 1:53:09 AM12/10/2021 1:52:37 AM</TimeStamp>
+        <ID>
+          <String>Dim Home Area Type</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>noa4P9eeM+FMzduObLXPFhfwZPI=12/10/2021 1:53:09 AM12/10/2021 1:52:37 AM</TimeStamp>
+        <ID>
+          <String>Dim Pedestrian Location</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>mr/st8Lq43bpfqQm6I3ByPxKNi8=12/10/2021 2:29:26 AM12/10/2021 2:01:11 AM</TimeStamp>
+        <ID>
+          <String>Dim Accident Severity</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>jUJ8wAVfArera+XjFqkmsSyPJjo=12/10/2021 2:29:26 AM12/10/2021 2:01:11 AM</TimeStamp>
+        <ID>
+          <String>Dim Vehicle Type</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>l1WraiQXyanAPekoNaxFKDGstJ4=12/10/2021 2:43:46 AM12/10/2021 2:01:11 AM</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>UC9oxRBYU/6upXnqfhdZB4gp+9w=12/10/2021 2:29:26 AM12/10/2021 2:01:11 AM</TimeStamp>
+        <ID>
+          <String>Dim Built Up Road</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>BFq3ttedBXEQ0/Wn8lsxhN11GrA=12/10/2021 1:05:59 AM12/10/2021 12:51:09 AMG+Ow4NxTiBpncFcfjrdv+ds9/l0=12/10/2021 12:51:09 AM12/10/2021 12:51:09 AM</TimeStamp>
+        <ID>
+          <String>QLBI 10 1 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>AoEPab00XZ5INoY2MdSqzuxu+/U=12/10/2021 1:21:09 AM12/10/2021 1:20:23 AMzXWwy+e1i+AoJgbyx+cPhZwYR+k=12/10/2021 1:20:23 AM12/10/2021 1:20:23 AM</TimeStamp>
+        <ID>
+          <String>QLBI 10 2 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>4I3/pMqfRnBUeY8fqbrDeMqVp4g=12/10/2021 1:53:09 AM12/10/2021 1:52:37 AMqxOD6YScaHGK55lIUhI3j0153VA=12/10/2021 1:52:38 AM12/10/2021 1:52:37 AM</TimeStamp>
+        <ID>
+          <String>QLBI 10 3 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>yeIUGOBmrg5qN4+VnPDY8QQ4RDg=12/10/2021 2:46:51 AM12/10/2021 2:01:11 AM78jFXivpyoIWdrIJYWeCGa28GUE=12/10/2021 2:01:11 AM12/10/2021 2:01:11 AM</TimeStamp>
+        <ID>
+          <String>QLBI 8 9 DDS</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>mCcszeZEAt0ZvHg+8uKTBKwC69M=12/10/2021 12:45:55 AM12/10/2021 12:45:54 AM</TimeStamp>
+      <ID>
+        <String>Cube_Question10</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2021-12-13T09:05:55.336667Z</LastDeployed>
+</DeploymentSnapshot>

@@ -1,0 +1,137 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="589388c3-9a2f-4e55-a1e5-fa85ea5d5358" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>QLBI 10 1 DDS</ID>
+  <Name>QLBI 10 1 DDS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>QLBI 10 1 DDS</DataSourceID>
+  <Schema>
+    <xs:schema id="QLBI_x0020_10_x0020_1_x0020_DDS" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="QLBI_x0020_10_x0020_1_x0020_DDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="282c8ce3-c3d9-49dc-afd3-6313b79bf4b5">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_Age_Band" msprop:design-time-name="18ccde47-63bf-49dd-83c1-1c7f50d4a797" msprop:DbTableName="Dim_Age_Band" msprop:FriendlyName="Dim_Age_Band" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKAge_Band" msprop:design-time-name="6b55ee71-f4ca-4566-bff9-5a493a925256" msprop:DbColumnName="SKAge_Band" msprop:FriendlyName="SKAge_Band" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="24d6e2c7-605e-4697-838e-413bd75cae50" msprop:DbColumnName="Description" msprop:FriendlyName="Description" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Gender" msprop:design-time-name="2ece0704-264f-4142-8e78-bc62fbbdf4c7" msprop:DbTableName="Dim_Gender" msprop:FriendlyName="Dim_Gender" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKGender" msprop:design-time-name="3ae3148b-b09e-4c68-87ae-a6526759ec6b" msprop:DbColumnName="SKGender" msprop:FriendlyName="SKGender" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="0f7933fe-a8ae-40df-8a71-165147a52411" msprop:DbColumnName="Description" msprop:FriendlyName="Description" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Was_Vehicle_Left_Hand_Drive" msprop:design-time-name="a31ae680-075c-457d-8ef8-a13646be9a3f" msprop:DbTableName="Dim_Was_Vehicle_Left_Hand_Drive" msprop:FriendlyName="Dim_Was_Vehicle_Left_Hand_Drive" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKWas_Vehicle_Left_Hand_Drive" msprop:design-time-name="b84558c9-5b39-4e93-8072-4653de5398c2" msprop:DbColumnName="SKWas_Vehicle_Left_Hand_Drive" msprop:FriendlyName="SKWas_Vehicle_Left_Hand_Drive" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="14c2983e-703f-4484-9a54-9d97eb2a7cc1" msprop:DbColumnName="Description" msprop:FriendlyName="Description" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_Table" msprop:design-time-name="a3b67043-3b5d-473f-84d5-baee1dd2c2ac" msprop:DbTableName="Fact_Table" msprop:FriendlyName="Fact_Table" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKFact" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="59327bba-54ce-436f-88d6-bf88c86305bf" msprop:DbColumnName="SKFact" msprop:FriendlyName="SKFact" type="xs:int" />
+                  <xs:element name="SKGender" msprop:design-time-name="7a0f89f2-31c3-4471-9b14-c6dfbe5f14c6" msprop:DbColumnName="SKGender" msprop:FriendlyName="SKGender" type="xs:int" />
+                  <xs:element name="SKAge_Band" msprop:design-time-name="9e83f136-fc51-465b-ad78-936f06dc43ad" msprop:DbColumnName="SKAge_Band" msprop:FriendlyName="SKAge_Band" type="xs:int" />
+                  <xs:element name="SKWas_Vehicle_Left_Hand_Drive" msprop:design-time-name="dc4aaf2f-45eb-43dd-b073-3fa0f0b6a496" msprop:DbColumnName="SKWas_Vehicle_Left_Hand_Drive" msprop:FriendlyName="SKWas_Vehicle_Left_Hand_Drive" type="xs:int" />
+                  <xs:element name="number_of_accidents" msprop:design-time-name="9ab710b4-f626-4ad6-93ed-8365225be048" msprop:DbColumnName="number_of_accidents" msprop:FriendlyName="number_of_accidents" type="xs:int" />
+                  <xs:element name="create_date" msprop:design-time-name="7bcc250d-f638-4464-8f13-15352a7527cb" msprop:DbColumnName="create_date" msprop:FriendlyName="create_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="update_date" msprop:design-time-name="9ecc8bbc-33f6-4162-9a75-ba3adf6ebf87" msprop:DbColumnName="update_date" msprop:FriendlyName="update_date" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Age_Band" />
+          <xs:field xpath="SKAge_Band" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Gender_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Gender" />
+          <xs:field xpath="SKGender" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Was_Vehicle_Left_Hand_Drive_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Was_Vehicle_Left_Hand_Drive" />
+          <xs:field xpath="SKWas_Vehicle_Left_Hand_Drive" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_Table_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKFact" />
+        </xs:unique>
+        <xs:keyref name="FK_Fact_Was_Vehicle_Left_Hand_Drive" refer="dbo_Dim_Was_Vehicle_Left_Hand_Drive_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKWas_Vehicle_Left_Hand_Drive" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Age_Band" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKAge_Band" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Gender" refer="dbo_Dim_Gender_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKGender" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <QLBI_x0020_10_x0020_1_x0020_DDS xmlns="" />
+  </Schema>
+</DataSourceView>

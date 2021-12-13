@@ -1,0 +1,137 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="89c5e561-f792-4633-b4ae-889988c5dcf7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>QLBI 10 2 DDS</ID>
+  <Name>QLBI 10 2 DDS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>QLBI 10 2 DDS</DataSourceID>
+  <Schema>
+    <xs:schema id="QLBI_x0020_10_x0020_2_x0020_DDS" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="QLBI_x0020_10_x0020_2_x0020_DDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="59167e6a-543c-4505-8f28-74dc2ed44e97">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_Light_Condition" msprop:design-time-name="5120204d-86aa-44c8-910f-6c9f21a5abe8" msprop:DbTableName="Dim_Light_Condition" msprop:FriendlyName="Dim_Light_Condition" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKLight_Condition" msprop:design-time-name="55183e62-e288-48cc-b971-b28ef8c8699f" msprop:DbColumnName="SKLight_Condition" msprop:FriendlyName="SKLight_Condition" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="d1f7587c-0992-478a-9460-8c51e3af5d31" msprop:DbColumnName="Description" msprop:FriendlyName="Description" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Road_Surface_Conditions" msprop:design-time-name="a405c129-63b3-4400-9c56-b3dde3961e3b" msprop:DbTableName="Dim_Road_Surface_Conditions" msprop:FriendlyName="Dim_Road_Surface_Conditions" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKRoad_Surface_Conditions" msprop:design-time-name="441c2a7c-2fc2-448a-9d7f-7b19c752911b" msprop:DbColumnName="SKRoad_Surface_Conditions" msprop:FriendlyName="SKRoad_Surface_Conditions" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="d5e9ca34-a8dd-4798-a614-d4bd08602ce9" msprop:DbColumnName="Description" msprop:FriendlyName="Description" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Weather_Conditions" msprop:design-time-name="38e9a461-c7e7-4986-9ad9-e9104b172255" msprop:DbTableName="Dim_Weather_Conditions" msprop:FriendlyName="Dim_Weather_Conditions" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKWeather_Condition" msprop:design-time-name="dc83a75c-122e-4459-8b61-30041a74afd1" msprop:DbColumnName="SKWeather_Condition" msprop:FriendlyName="SKWeather_Condition" type="xs:int" />
+                  <xs:element name="Description" msprop:design-time-name="482da3d8-f65a-4a47-98a5-20808467e5f0" msprop:DbColumnName="Description" msprop:FriendlyName="Description" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_Table" msprop:design-time-name="79ce7801-76fd-4e60-ad37-ee78f5ecf7fc" msprop:DbTableName="Fact_Table" msprop:FriendlyName="Fact_Table" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SKFact" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="414a1420-25f0-400b-bd68-6190e3de81fe" msprop:DbColumnName="SKFact" msprop:FriendlyName="SKFact" type="xs:int" />
+                  <xs:element name="SKRoad_Surface_Conditions" msprop:design-time-name="3db649aa-cfdb-4a3f-8266-7bbfc38f3c5c" msprop:DbColumnName="SKRoad_Surface_Conditions" msprop:FriendlyName="SKRoad_Surface_Conditions" type="xs:int" />
+                  <xs:element name="SKLight_Condition" msprop:design-time-name="1d15afe6-91a6-4a70-a5c4-5adea3d04e79" msprop:DbColumnName="SKLight_Condition" msprop:FriendlyName="SKLight_Condition" type="xs:int" />
+                  <xs:element name="SKWeather_Condition" msprop:design-time-name="faea9eee-cd4a-487a-b89c-abcf09a6521b" msprop:DbColumnName="SKWeather_Condition" msprop:FriendlyName="SKWeather_Condition" type="xs:int" />
+                  <xs:element name="number_of_accidents" msprop:design-time-name="54197424-8b88-4853-ae82-8da103b55198" msprop:DbColumnName="number_of_accidents" msprop:FriendlyName="number_of_accidents" type="xs:int" />
+                  <xs:element name="create_date" msprop:design-time-name="abcdc0cb-1b8f-4ca5-b916-4e8127c1a212" msprop:DbColumnName="create_date" msprop:FriendlyName="create_date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="update_date" msprop:design-time-name="a41e43ae-98e5-493f-85bd-48aa101cd7e7" msprop:DbColumnName="update_date" msprop:FriendlyName="update_date" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Light_Condition" />
+          <xs:field xpath="SKLight_Condition" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Road_Surface_Conditions_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Road_Surface_Conditions" />
+          <xs:field xpath="SKRoad_Surface_Conditions" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Weather_Conditions_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Weather_Conditions" />
+          <xs:field xpath="SKWeather_Condition" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_Table_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKFact" />
+        </xs:unique>
+        <xs:keyref name="FK_Fact_Weather_Conditions" refer="dbo_Dim_Weather_Conditions_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKWeather_Condition" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Road_Surface_Conditions" refer="dbo_Dim_Road_Surface_Conditions_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKRoad_Surface_Conditions" />
+        </xs:keyref>
+        <xs:keyref name="FK_Fact_Light_Condition" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Table" />
+          <xs:field xpath="SKLight_Condition" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <QLBI_x0020_10_x0020_2_x0020_DDS xmlns="" />
+  </Schema>
+</DataSourceView>

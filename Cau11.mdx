@@ -1,0 +1,18 @@
+WITH MEMBER [Measures].[Percentage] AS 
+'
+(([Measures].[Number Of Car Accidents]-
+[Measures].[Number Of Car Accidents Prev])
+/[Measures].[Number Of Car Accidents Prev]*100)'
+
+MEMBER [Measures].[Number Of Car Accidents Prev] AS 
+'
+([Dim Date 3].[Year].CurrentMember.PrevMember,
+[Measures].[Number Of Car Accidents])'
+SELECT {[Measures].[Number Of Car Accidents], 
+[Measures].[Percentage]} ON 0,
+[Dim Date 3].[Year].Year ON 1 FROM [QLBI 11 DDS];
+
+
+
+
+

@@ -37,6 +37,15 @@
           <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">PasswordRemoved</ImpersonationInfoSecurity>
         </ImpersonationInfo>
       </DataSource>
+      <DataSource>
+        <ID>QLBI 11 DDS</ID>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=DESKTOP-LATGDUJ;Integrated Security=SSPI;Initial Catalog=QLBI_11_DDS</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateAccount</ImpersonationMode>
+          <Account xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Jane Hwang</Account>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">PasswordRemoved</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
     </DataSources>
     <Dimensions>
       <Dimension>
@@ -74,6 +83,9 @@
       </Dimension>
       <Dimension>
         <ID>Dim Date 2</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Date 3</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
@@ -124,6 +136,19 @@
             <Partitions>
               <Partition>
                 <ID>Fact Table</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>QLBI 11 DDS</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Variance</ID>
+            <Partitions>
+              <Partition>
+                <ID>Variance</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>

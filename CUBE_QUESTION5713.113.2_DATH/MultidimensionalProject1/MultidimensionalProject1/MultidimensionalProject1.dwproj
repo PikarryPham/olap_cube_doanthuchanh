@@ -47,6 +47,16 @@
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
+    <ProjectItem>
+      <Name>QLBI 11 DDS.cube</Name>
+      <FullPath>QLBI 11 DDS.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>QLBI 11 DDS.partitions</Name>
+          <FullPath>QLBI 11 DDS.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
   </Cubes>
   <Dimensions>
     <ProjectItem>
@@ -97,6 +107,10 @@
       <Name>Dim Date 2.dim</Name>
       <FullPath>Dim Date 2.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Date 3.dim</Name>
+      <FullPath>Dim Date 3.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>
@@ -115,6 +129,10 @@
       <Name>QLBI Ques13 2 DDS.ds</Name>
       <FullPath>QLBI Ques13 2 DDS.ds</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>QLBI 11 DDS.ds</Name>
+      <FullPath>QLBI 11 DDS.ds</FullPath>
+    </ProjectItem>
   </DataSources>
   <DataSourceViews>
     <ProjectItem>
@@ -132,6 +150,10 @@
     <ProjectItem>
       <Name>QLBI Ques13 2 DDS.dsv</Name>
       <FullPath>QLBI Ques13 2 DDS.dsv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>QLBI 11 DDS.dsv</Name>
+      <FullPath>QLBI 11 DDS.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
   <Configurations>
@@ -159,6 +181,11 @@
             <Name>QLBI Ques13 2 DDS</Name>
             <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-LATGDUJ;Integrated Security=SSPI;Initial Catalog=QLBI_Ques13_2_DDS</Value>
           </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>QLBI 11 DDS</Id>
+            <Name>QLBI 11 DDS</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-LATGDUJ;Integrated Security=SSPI;Initial Catalog=QLBI_11_DDS</Value>
+          </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
           <ConfigurationSetting>
@@ -179,6 +206,11 @@
           <ConfigurationSetting>
             <Id>QLBI Ques13 2 DDS</Id>
             <Name>QLBI Ques13 2 DDS</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>QLBI 11 DDS</Id>
+            <Name>QLBI 11 DDS</Name>
             <Value xsi:type="xsd:int">0</Value>
           </ConfigurationSetting>
         </ConnectionSecurityMappings>

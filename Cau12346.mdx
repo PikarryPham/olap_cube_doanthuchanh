@@ -26,14 +26,23 @@ over years.
 Đã bổ sung: trung bình qua các năm, ở mỗi nhóm tuổi tại mỗi type casualty có bao nhiêu ca thương vong
 Đã bổ sung: tổng số ca thương vong tại mỗi type casualty cho tất cả các nhóm tuổi qua mỗi năm: https://simonlearningsqlserver.wordpress.com/2018/03/25/grouping-sets-and-rollup-cube/
 */
-SELECT non empty {[Dim Date Ques 3].[Ques3_Calendar].[Year],[Dim Date Ques 3].[Ques3_Calendar]} on columns, 
+//SELECT non empty {[Dim Date Ques 3].[Ques3_Calendar].[Year],[Dim Date Ques 3].[Ques3_Calendar]} on columns, 
+//non empty crossjoin ([Dim Casualty Type Ques 3].[Description_CasualtyType].[Description_CasualtyType],[Dim Age Band Ques 3].[Description_AgeBand].[Description_AgeBand]) on rows
+//FROM (
+//	SELECT
+//	FROM [QLBI Ques3 DDS]
+//    WHERE [Dim Casualties Severity Ques 3].[Description_CSeverity].&[Fatal]
+//)
+//WHERE [Dim Gender Ques 3].[Description_Sex].&[Female];
+
+
+SELECT non empty crossjoin({[Dim Date Ques 3].[Ques3_Calendar].[Year]},[Dim Gender Ques 3].[Description_Sex].[Description_Sex]) on columns, 
 non empty crossjoin ([Dim Casualty Type Ques 3].[Description_CasualtyType].[Description_CasualtyType],[Dim Age Band Ques 3].[Description_AgeBand].[Description_AgeBand]) on rows
 FROM (
 	SELECT
 	FROM [QLBI Ques3 DDS]
     WHERE [Dim Casualties Severity Ques 3].[Description_CSeverity].&[Fatal]
-)
-WHERE [Dim Gender Ques 3].[Description_Sex].&[Female];
+);
 
 ---- Sử dụng all members để ra được giống như reference
  WITH MEMBER [Dim Date Ques 3].[Year].[2011-13 average] AS AVG( [Dim Date Ques 3].[Ques3_Calendar].[Year].&[2011] : [Dim Date Ques 3].[Ques3_Calendar].[Year].&[2013]) 

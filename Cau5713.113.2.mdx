@@ -13,6 +13,11 @@ from [QLBI Ques13 1 DDS]
 WHERE [Dim Vehicles Type].[Hierarchy].[Description].&[Car];
 
 //13.2 Use regional map to visually represent (by color) the number of car accidents in regions during a year in Scotland and North Ireland.
-select [Dim Date 2].[Hierarchy].[Year] on rows, non empty {[Dim Location].[Hierarchy].[Long].MEMBERS, [Dim Location].[Hierarchy].[Lat].MEMBERS} on columns
+//select [Dim Date 2].[Hierarchy].[Year] on rows, non empty {[Dim Location].[Hierarchy].[Long].MEMBERS, [Dim Location].[Hierarchy].[Lat].MEMBERS} on columns
+//from [QLBI Ques13 2 DDS]
+//WHERE [Dim Vehicles Type 2].[Hierarchy].[Description].&[Car];
+
+select [Dim Date].[Ques132Calendar].[Year] on rows, non empty {[Dim Location].[Lat].MEMBERS, [Dim Location].[Hierarchy].[Lat].MEMBERS} on columns
 from [QLBI Ques13 2 DDS]
 WHERE [Dim Vehicles Type 2].[Hierarchy].[Description].&[Car];
+

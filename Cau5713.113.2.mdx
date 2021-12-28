@@ -17,7 +17,7 @@ WHERE [Dim Vehicles Type].[Hierarchy].[Description].&[Car];
 //from [QLBI Ques13 2 DDS]
 //WHERE [Dim Vehicles Type 2].[Hierarchy].[Description].&[Car];
 
-select [Dim Date].[Ques132Calendar].[Year] on rows, non empty {[Dim Location].[Lat].MEMBERS, [Dim Location].[Hierarchy].[Lat].MEMBERS} on columns
+select [Dim Date].[Ques132Calendar].[Year] on rows, 
+non empty ([Dim Location].[Lat].[Lat], [Dim Location].[Long].[Long]) on columns
 from [QLBI Ques13 2 DDS]
-WHERE [Dim Vehicles Type 2].[Hierarchy].[Description].&[Car];
 

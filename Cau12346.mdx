@@ -35,7 +35,6 @@ over years.
 //)
 //WHERE [Dim Gender Ques 3].[Description_Sex].&[Female];
 
-
 SELECT non empty crossjoin({[Dim Date Ques 3].[Ques3_Calendar].[Year]},[Dim Gender Ques 3].[Description_Sex].[Description_Sex]) on columns, 
 non empty crossjoin ([Dim Casualty Type Ques 3].[Description_CasualtyType].[Description_CasualtyType],[Dim Age Band Ques 3].[Description_AgeBand].[Description_AgeBand]) on rows
 FROM (
@@ -44,23 +43,7 @@ FROM (
     WHERE [Dim Casualties Severity Ques 3].[Description_CSeverity].&[Fatal]
 );
 
----- Sử dụng all members để ra được giống như reference
- WITH MEMBER [Dim Date Ques 3].[Year].[2011-13 average] AS AVG( [Dim Date Ques 3].[Ques3_Calendar].[Year].&[2011] : [Dim Date Ques 3].[Ques3_Calendar].[Year].&[2013]) 
- SELECT 
-   NON EMPTY 
-     [Dim Date Ques 3].[Year].ALLMEMBERS ON COLUMNS
-  ,NON EMPTY 
-     CrossJoin
-     (
-       [Dim Casualty Type Ques 3].[Description_CasualtyType].[Description_CasualtyType]
-      ,[Dim Age Band Ques 3].[Description_AgeBand].ALLMEMBERS
-     ) ON ROWS
- FROM (
-	SELECT
-	FROM [QLBI Ques3 DDS]
-    WHERE [Dim Casualties Severity Ques 3].[Description_CSeverity].&[Fatal] )
- WHERE [Dim Gender Ques 3].[Description_Sex].&[Female];
-
+ --- Casualty Severity/ Thay Age_Band = Home_Area_Type
 /*
 	Câu 6. Report the number of calsualities by Severity, Casualty Type and Age Group over years
 	Thiếu: % change
@@ -76,7 +59,138 @@ SELECT non empty crossjoin([Dim Time Of Day Ques 4].[Description_TimeOfDay].[Des
 non empty {[Dim Accident Severity Ques 4].[Description_Accident_Severity].[Description_Accident_Severity],[Dim Accident Severity Ques 4].[Description_Accident_Severity]} on columns
 FROM [QLBI Ques4 DDS];
 
-//SELECT non empty crossjoin([Dim Time Of Day Ques 4].[Description_TimeOfDay].[Description_TimeOfDay],[Dim Date Ques 4].[Ques4_Calendar].[Year]) on rows,
-//non empty crossjoin ([Dim Accident Severity Ques 4].[Description_Accident_Severity].[Description_Accident_Severity],
-//{[Dim Accident Severity Ques 4].[Ques4_AccidentSeverity].[SK Accident Severity],[Dim Accident Severity Ques 4].[Ques4_AccidentSeverity].[All]}) on columns
-//FROM [QLBI Ques4 DDS];
+/*
+
+Phần làm thêm (Không nằm trong yêu cầu của đồ án)
+
+*/
+
+ WITH MEMBER [Dim Date Ques 4].[Year].[2011-14 average] AS AVG( [Dim Date Ques 4].[Ques4_Calendar].[Year].&[2011] : [Dim Date Ques 4].[Ques4_Calendar].[Year].&[2014]) 
+ SELECT 
+   NON EMPTY 
+     [Dim Date Ques 4].[Year].ALLMEMBERS ON COLUMNS
+  ,NON EMPTY 
+     CrossJoin
+     (
+       [Dim Accident Severity Ques 4].[Description_Accident_Severity].[Description_Accident_Severity]
+      ,[Dim Time Of Day Ques 4].[Description_TimeOfDay].ALLMEMBERS
+     ) ON ROWS
+ FROM [QLBI Ques4 DDS]
+
+SELECT non empty crossjoin([Dim Time Of Day Ques 4].[Description_TimeOfDay].[Description_TimeOfDay],[Dim Date Ques 4].[Ques4_Calendar].[Year]) on rows,
+non empty crossjoin ([Dim Accident Severity Ques 4].[Description_Accident_Severity].[Description_Accident_Severity],
+{[Dim Accident Severity Ques 4].[Ques4_AccidentSeverity].[SK Accident Severity],[Dim Accident Severity Ques 4].[Ques4_AccidentSeverity].[All]}) on columns
+FROM [QLBI Ques4 DDS];
+
+---- Sử dụng all members để ra được giống như reference
+ WITH MEMBER [Dim Date Ques 3].[Year].[2011-14 average] AS AVG( [Dim Date Ques 3].[Ques3_Calendar].[Year].&[2011] : [Dim Date Ques 3].[Ques3_Calendar].[Year].&[2014]) 
+ SELECT 
+   NON EMPTY 
+     [Dim Date Ques 3].[Year].ALLMEMBERS ON COLUMNS
+  ,NON EMPTY 
+     CrossJoin
+     (
+       [Dim Casualty Type Ques 3].[Description_CasualtyType].[Description_CasualtyType] 
+      ,[Dim Age Band Ques 3].[Description_AgeBand].ALLMEMBERS
+     ) ON ROWS
+ FROM (
+	SELECT
+	FROM [QLBI Ques3 DDS]
+    WHERE [Dim Casualties Severity Ques 3].[Description_CSeverity].&[Fatal] )
+ WHERE [Dim Gender Ques 3].[Description_Sex].&[Female];
+--- Tìm giá trị avg cho number of casualties cho từng age group qua các năm
+WITH MEMBER 
+  [Dim Age Group Ques 6].[Description_AgeGroup].[AvgCas] AS
+   AVG (
+       [Dim Age Group Ques 6].[Description_AgeGroup].[Description_AgeGroup],
+	[Measures].[Number Of Casualties]) 
+SELECT 
+  non empty crossjoin([Measures].[Number Of Casualties],[Dim Date Ques 6].[Ques6_Calendar].[Year]) ON COLUMNS,
+  {
+   [Dim Age Group Ques 6].[Description_AgeGroup].[Description_AgeGroup], 
+   [Dim Age Group Ques 6].[Description_AgeGroup].[AvgCas]
+  } ON ROWS
+FROM [QLBI Ques6 DDS]
+
+--- Đối với age group
+WITH MEMBER 
+  [Dim Age Group Ques 6].[Description_AgeGroup].[MaxNumb] AS
+   MAX (
+       [Dim Age Group Ques 6].[Description_AgeGroup].[Description_AgeGroup],
+	[Measures].[Number Of Casualties])
+MEMBER [Dim Age Group Ques 6].[Description_AgeGroup].[MinNumb] AS MIN (
+       [Dim Age Group Ques 6].[Description_AgeGroup].[Description_AgeGroup],
+	[Measures].[Number Of Casualties])
+SELECT 
+  non empty crossjoin([Measures].[Number Of Casualties],[Dim Date Ques 6].[Ques6_Calendar].[Year]) ON COLUMNS,
+  ({
+   [Dim Age Group Ques 6].[Description_AgeGroup].[Description_AgeGroup], 
+   [Dim Age Group Ques 6].[Description_AgeGroup].[All]
+  }) ON ROWS
+FROM [QLBI Ques6 DDS];
+
+--- Đối với casualty severity
+
+--- Tìm giá trị max cho number of casualties qua các theo từng casualty severity
+WITH MEMBER 
+  [Dim Age Group Ques 6].[Description_AgeGroup].[MaxNumb] AS
+   MAX (
+       [Dim Age Group Ques 6].[Description_AgeGroup].[Description_AgeGroup],
+	[Measures].[Number Of Casualties])
+
+MEMBER [Dim Age Group Ques 6].[Description_AgeGroup].[MinNumb] AS MIN (
+       [Dim Age Group Ques 6].[Description_AgeGroup].[Description_AgeGroup],
+	[Measures].[Number Of Casualties])
+SELECT 
+  non empty crossjoin([Measures].[Number Of Casualties],[Dim Date Ques 6].[Ques6_Calendar].[Year],[Dim Casualties Severity Ques 6].[Description_CSQues6].[Description_CSQues6]) ON COLUMNS,
+  ({
+   [Dim Age Group Ques 6].[Description_AgeGroup].[Description_AgeGroup], 
+   -- [Dim Age Group Ques 6].[Description_AgeGroup].[MaxNumb]
+   [Dim Age Group Ques 6].[Description_AgeGroup].[All]
+  }) ON ROWS
+FROM [QLBI Ques6 DDS]
+
+-- Fatal: Number of casualties / All >= 0.2 --> 1, ngược lại là 0
+-- Serious: Number of casualties / All >= 0.5 --> 1, ngược lại là 0
+-- Slight: Number of casualties / All >= 0.8 --> 1, ngược lại là 0, else -1
+
+//WITH MEMBER 
+//  [Dim...].[Description_AgeGroup].[MaxNumb] AS
+//   MAX (
+//       [Dim Age Group Ques 6].[Description_AgeGroup].[Description_AgeGroup],
+//	[Measures].[Number Of Casualties])
+//SELECT 
+//  non empty crossjoin([Measures].[Number Of Casualties],[Dim Date Ques 6].[Ques6_Calendar].[Year],[Dim Casualties Severity Ques 6].[Description_CSQues6].[Description_CSQues6]) ON COLUMNS,
+//  ({
+//   [Dim Age Group Ques 6].[Description_AgeGroup].[Description_AgeGroup], 
+//   -- [Dim Age Group Ques 6].[Description_AgeGroup].[MaxNumb]
+//   [Dim Age Group Ques 6].[Description_AgeGroup].[All]
+//  }) ON ROWS
+//FROM [QLBI Ques6 DDS]
+
+WITH MEMBER 
+  [Measures].[AllCasual] AS
+  (root([Dim Date Ques 6].[Year]),[Measures].[Number Of Casualties])
+SELECT 
+  non empty crossjoin([Dim Age Group Ques 6].[Description_AgeGroup].[Description_AgeGroup],[Dim Date Ques 6].[Ques6_Calendar].[Year]) ON COLUMNS, --,[Dim Casualties Severity Ques 6].[Description_CSQues6].[Description_CSQues6]) ON COLUMNS,
+  [Measures].[AllCasual] ON ROWS
+FROM [QLBI Ques6 DDS]
+
+-- Test -- as expected
+WITH MEMBER MEASURES.IFFDEMO AS
+CASE 
+	WHEN [Dim Casualties Severity Ques 6].[Description_CSQues6].currentmember IS [Dim Casualties Severity Ques 6].[Description_CSQues6].&[Fatal] then 0.2
+	WHEN [Dim Casualties Severity Ques 6].[Description_CSQues6].currentmember IS [Dim Casualties Severity Ques 6].[Description_CSQues6].&[Serious] then 0.5
+	else 0.8
+END
+SELECT MEASURES.IFFDEMO ON COLUMNS,
+[Dim Casualties Severity Ques 6].[Description_CSQues6].[Description_CSQues6] on rows
+FROM [QLBI Ques6 DDS]
+
+--- Tinh number of casualties cho tung nam doi vs fatal
+WITH MEMBER 
+  [Measures].[AllCasual] AS
+  (root([Dim Date Ques 6].[Year].currentmember),root([Dim Casualties Severity Ques 6].[Description_CSQues6].currentmember),[Dim Age Group Ques 6].[Description_AgeGroup],[Measures].[Number Of Casualties])
+SELECT [Measures].[AllCasual] ON COLUMNS,
+crossjoin([Dim Casualties Severity Ques 6].[Description_CSQues6].&[Fatal],[Dim Date Ques 6].[Year].&[2011]) ON ROWS
+FROM [QLBI Ques6 DDS]

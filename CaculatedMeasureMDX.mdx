@@ -1,0 +1,12 @@
+﻿---- Sử dụng all members để ra được giống như reference
+ WITH MEMBER [Dim Date].[Year].[2011-14 average] AS AVG( [Dim Date].[Year].&[2011] : [Dim Date].[Year].&[2014]) 
+ SELECT 
+   NON EMPTY 
+     [Dim Date].[Year].ALLMEMBERS ON COLUMNS
+  ,NON EMPTY 
+     CrossJoin
+     (
+       [Dim Casualty Type].[Description].[Description]
+      ,[Dim Home Area Type].[Description].ALLMEMBERS
+     ) ON ROWS
+ FROM [QLBI Calculated Measure DDS];
